@@ -1,0 +1,12 @@
+.quick-picks {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.quick-picks .btn {
+  padding: 10px 14px;
+  font-size: 12.5px;
+}

@@ -1,0 +1,176 @@
+.hero {
+  padding: 64px 0 48px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.hero-copy {
+  max-width: 620px;
+  color: #52657a;
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(255, 105, 61, .18), transparent 42%),
+    linear-gradient(160deg, #1c3552 0%, var(--navy) 55%, #122438 100%);
+  border-radius: var(--radius);
+  padding: 28px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(23, 44, 69, .22);
+  animation: heroCardIn .9s var(--ease) both;
+}
+
+.hero-card:after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 50%;
+  right: -80px;
+  top: -90px;
+  box-shadow: 0 0 0 28px rgba(255, 255, 255, .025), 0 0 0 58px rgba(255, 255, 255, .025);
+  animation: heroRing 8s ease-in-out infinite;
+}
+
+.hero-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-kicker {
+  font-size: 11px;
+  color: #b9c8d6;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+}
+
+.hero-rate {
+  font: 800 39px Manrope, sans-serif;
+  margin: 12px 0 4px;
+  letter-spacing: -1px;
+}
+
+.hero-rate small {
+  font: 600 13px "DM Sans";
+  color: #bdcbd8;
+}
+
+.rate-sub {
+  color: #bdcbd8;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.hero-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.mini {
+  background: rgba(255, 255, 255, .08);
+  padding: 14px;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, .06);
+  transition: background .25s ease, transform .35s var(--ease);
+}
+
+.mini:hover {
+  background: rgba(255, 255, 255, .12);
+  transform: translateY(-2px);
+}
+
+.mini span {
+  display: block;
+  color: #bdcbd8;
+  font-size: 11px;
+}
+
+.mini strong {
+  font-size: 17px;
+  letter-spacing: -.3px;
+}
+
+.demo-note {
+  font-size: 10.5px;
+  color: #aebdca;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+@keyframes heroCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroRing {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: .75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card,
+  .hero-card:after {
+    animation: none;
+  }
+
+  .mini:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 32px 0 24px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .hero-rate {
+    font-size: 34px;
+  }
+}

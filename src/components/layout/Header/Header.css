@@ -1,0 +1,130 @@
+header {
+  background: rgba(237, 243, 247, .86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(23, 44, 69, .08);
+}
+
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 800 20px Manrope, sans-serif;
+  letter-spacing: -.7px;
+  transition: opacity .2s ease;
+}
+
+.brand:hover {
+  opacity: .88;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--orange);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 8px 16px rgba(255, 105, 61, .25);
+}
+
+.brand small {
+  display: block;
+  font: 600 10px "DM Sans";
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.navlinks {
+  display: flex;
+  gap: 24px;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.navlinks a {
+  position: relative;
+  padding: 4px 0;
+  transition: color .2s ease;
+}
+
+.navlinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s var(--ease);
+}
+
+.navlinks a:hover {
+  color: var(--orange);
+}
+
+.navlinks a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-cta {
+  background: var(--navy);
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    transform .3s var(--ease),
+    box-shadow .3s var(--ease),
+    background-color .2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(23, 44, 69, .18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navlinks a::after,
+  .nav-cta {
+    transition: none;
+  }
+
+  .nav-cta:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .navlinks {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    height: 65px;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+}

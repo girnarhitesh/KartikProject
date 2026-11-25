@@ -1,0 +1,30 @@
+.faqs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.faq {
+  padding: 20px 22px;
+  height: 100%;
+}
+
+.faq h3 {
+  font: 800 15px/1.35 Manrope, sans-serif;
+  letter-spacing: -.2px;
+  margin: 0 0 10px;
+}
+
+.faq p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .faqs {
+    grid-template-columns: 1fr;
+  }
+}

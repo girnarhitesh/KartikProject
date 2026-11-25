@@ -1,0 +1,42 @@
+.segmented {
+  display: flex;
+  background: #edf2f6;
+  padding: 4px;
+  border-radius: 11px;
+  gap: 4px;
+  margin-bottom: 17px;
+}
+
+.segmented button {
+  border: 0;
+  background: transparent;
+  flex: 1;
+  padding: 10px 6px;
+  border-radius: 8px;
+  color: #62758a;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background-color .25s ease,
+    color .25s ease,
+    box-shadow .25s ease,
+    transform .25s var(--ease);
+}
+
+.segmented button:hover:not(.active) {
+  color: var(--navy);
+  background: rgba(255, 255, 255, .55);
+}
+
+.segmented button.active {
+  background: var(--navy);
+  color: white;
+  box-shadow: 0 6px 14px rgba(23, 44, 69, .18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .segmented button {
+    transition: none;
+  }
+}

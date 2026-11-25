@@ -1,0 +1,19 @@
+:root {
+  --bg: #e9f0f5;
+  --bg-deep: #e2ebf2;
+  --orange: #ff693d;
+  --orange-soft: rgba(255, 105, 61, .12);
+  --navy: #172c45;
+  --white: #fff;
+  --muted: #64748b;
+  --line: #d7e1e9;
+  --green: #16845b;
+  --shadow: 0 14px 40px rgba(23, 44, 69, .08);
+  --shadow-hover: 0 18px 48px rgba(23, 44, 69, .12);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --duration: .45s;
+  --section-gap: 56px;
+  --panel-pad: 24px;
+}
