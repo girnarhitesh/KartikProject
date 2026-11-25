@@ -1,0 +1,10 @@
+# Update Host and Sitemap to your live production domain before launch.
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+Disallow: /src/
+Disallow: /node_modules/
+
+Sitemap: https://www.karimnagargoldrate.com/sitemap.xml

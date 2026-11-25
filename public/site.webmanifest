@@ -1,0 +1,19 @@
+{
+  "name": "Karimnagar Gold Rate",
+  "short_name": "Gold Rate KNR",
+  "description": "Check indicative 22K and 24K gold rates in Karimnagar, calculate gold from your budget, and explore price trends.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#8b6914",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

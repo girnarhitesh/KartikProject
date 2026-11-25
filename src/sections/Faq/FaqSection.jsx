@@ -5,7 +5,7 @@ import './Faq.css'
 
 export default function FaqSection({ items = faqs }) {
   return (
-    <section className="section">
+    <section className="section" id="faq">
       <div className="wrap">
         <div className="reveal">
           <SectionHead title="Gold buying guide" subtitle="Quick answers to common gold-rate questions in Karimnagar." />
