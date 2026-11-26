@@ -19,4 +19,9 @@ export const site = {
     region: 'Telangana',
     country: 'IN',
   },
+  pages: {
+    home: '/',
+    terms: '/terms-and-conditions.html',
+    privacy: '/privacy-policy.html',
+  },
 }

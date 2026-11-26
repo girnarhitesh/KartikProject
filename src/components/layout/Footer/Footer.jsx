@@ -13,7 +13,10 @@ export default function Footer() {
         </div>
         <div className="footer-row">
           <span>© {new Date().getFullYear()} Karimnagar Gold Rate. All rights reserved.</span>
-          <span>Made for Karimnagar, Telangana</span>
+          <span className="footer-links">
+            <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+          </span>
         </div>
       </div>
     </footer>
